@@ -100,8 +100,59 @@ namespace UniRitter.UniRitter2015.Specs
         public void ThenIReceiveAMessageListingAllValidationErrors()
         {
             var validationMessage = response.Content.ReadAsStringAsync().Result;
-            Assert.That(validationMessage, Contains.Substring("The firstName field is required."));
-            Assert.That(validationMessage, Contains.Substring("The email field is not a valid e-mail address."));
+            Assert.That(validationMessage, Contains.Substring("firstName"));
+            Assert.That(validationMessage, Contains.Substring("email"));
         }
+
+        [Given(@"an existing person resource")]
+        public void GivenAnExistingPersonResource()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Given(@"a valid update message to that resource")]
+        public void GivenAValidUpdateMessageToThatResource()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I run a PUT command against the /people endpoint")]
+        public void WhenIRunAPUTCommandAgainstThePeopleEndpoint()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I receive a success \(code (.*)\) status message")]
+        public void ThenIReceiveASuccessCodeStatusMessage(int p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I receive the updated resource in the body of the message")]
+        public void ThenIReceiveTheUpdatedResourceInTheBodyOfTheMessage()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Given(@"an invalid update message to that resource")]
+        public void GivenAnInvalidUpdateMessageToThatResource()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I receive an error \(code (.*)\) status message")]
+        public void ThenIReceiveAnErrorCodeStatusMessage(int p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I receive a list of validation errors in the body of the message")]
+        public void ThenIReceiveAListOfValidationErrorsInTheBodyOfTheMessage()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+
+
     }
 }
