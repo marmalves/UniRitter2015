@@ -7,7 +7,7 @@ using UniRitter.UniRitter2015.Models;
 
 namespace UniRitter.UniRitter2015.Services.Implementation
 {
-    public class MongoPostRepository : IRepository<PostModel>
+    public class MongoPostRepository
     {
         private IMongoDatabase database;
         private IMongoCollection<PostModel> collection;

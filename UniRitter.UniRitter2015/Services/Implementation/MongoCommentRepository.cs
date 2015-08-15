@@ -7,7 +7,7 @@ using UniRitter.UniRitter2015.Models;
 
 namespace UniRitter.UniRitter2015.Services.Implementation
 {
-    public class MongoCommentRepository : IRepository<CommentModel>
+    public class MongoCommentRepository
     {
         private IMongoDatabase database;
         private IMongoCollection<CommentModel> collection;
