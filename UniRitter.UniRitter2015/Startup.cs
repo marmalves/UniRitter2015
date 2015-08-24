@@ -25,8 +25,8 @@ namespace UniRitter.UniRitter2015
         {
             var config = new HttpConfiguration();
             config.Routes.MapHttpRoute("DefaultApi", "{controller}/{id}",
-                new {id = RouteParameter.Optional, controller = "values"});
-            
+                new { id = RouteParameter.Optional, controller = "values" });
+
             config.Formatters.Remove(config.Formatters.XmlFormatter);
 
             config.Services.Add(typeof(IExceptionLogger), new NLogExceptionLogger());

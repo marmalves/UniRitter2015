@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -96,7 +97,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseAPISteps.cs" />
+    <Compile Include="CommonAPISteps.cs" />
     <Compile Include="GlobalHooks.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\IModel.cs" />
+    <Compile Include="Models\Post.cs" />
     <Compile Include="PeopleAPI.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -104,11 +110,11 @@
     </Compile>
     <Compile Include="PeopleAPISteps.cs" />
     <Compile Include="PostsAPI.feature.cs">
-      <DependentUpon>PostsAPI.feature</DependentUpon>
-      <SubType>Code</SubType>
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PostsAPI.feature</DependentUpon>
     </Compile>
+    <Compile Include="PostsAPISteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
